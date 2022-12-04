@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="EmployeeProject.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>UNIQTECH Solutions</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="Css/css/style.css" rel="stylesheet" />
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <form id="form1" runat="server">
+        <div class="wrapper d-flex align-items-stretch">
+            <nav id="sidebar" class="active" style="position: fixed; width: 80px; height: 100vh; top: 0; left: 0;">
+                <h2><a href="index.html" class="logo">UNIQTECH</a></h2>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="HomePage.aspx"><span class="fa fa-home"></span>Home</a>
+                    </li>
+                    <li>
+                        <a href="EmployeePage.aspx"><span class="fa fa-user"></span>Employee</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-plus-square"></span>Add</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="headerbar" class="active" style="width: 100%">
+                <nav class="navbar nav-bar">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </nav>
+                <div class="maincontent">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <footer class="p-3 shadow position-fixed w-100">
+                        <p class="m-0 text-center text-white">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            All rights reserved | <i class="icon-heart" aria-hidden="true"></i><a href="" target="_blank">UNIQTech Solutions</a>
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </form>
+</body>
+</html>
